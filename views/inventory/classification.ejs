@@ -1,0 +1,12 @@
+<!--title code to prevent redudancy-->
+<% if (title) { %>
+    <h1><%= title %></h1>
+    <% } else {
+      res.redirect('/')
+    } %>
+
+<!--Message for future message-->
+<%# messages() %>
+
+<!--Inventory items display-->
+<%- grid %>  
