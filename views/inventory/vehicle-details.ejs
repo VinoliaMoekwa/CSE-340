@@ -1,0 +1,13 @@
+<!-- Title -->
+<% if (title) { %>
+    <h1><%= title %></h1>
+  <% } else { %>
+    <%- res.redirect('/') %>
+  <% } %>
+  
+  <!-- Placeholder for future messages -->
+  <%# messages() %>
+  
+  <!-- Vehicle Details (HTML grid containing the vehicle's information) -->
+  <%- grid %>
+  

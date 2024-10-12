@@ -58,6 +58,28 @@ Util.buildClassificationGrid = async function(data){
   return grid
 }
 
+/* **************************************
+* Build the Invetory for Vehicles HTML
+* ************************************ */
+const price = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(vehicle_id.price);
+const mileage = new Intl.NumberFormat('en-US').format(vehicle_id.mileage);
+
+Util.buildVehicledata = async function(data){
+  const vehicleData = `
+  <div class ="vehicle-details">
+  <h1>${vehicle_id.make} ${vehicle_id.model}<h1>
+  <img src="${vehicle_inv_image}>" alt="${vehicle_id.make} ${vehicle_id.model}">
+  <p>Year:${vehicle_id.year}</p>
+  <p>Price:${price}</p>
+  <p>Mileage: ${mileage} miles</p>
+  <p>Description:${vehicle_id.description}</p>
+  </div>`
+  ;
+
+  return vehicleData
+  
+}
+
 /* ****************************************
  * Middleware For Handling Errors
  * Wrap other function in this for 
