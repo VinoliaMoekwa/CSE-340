@@ -60,19 +60,19 @@ Util.buildClassificationGrid = async function(data){
 
 /* **************************************
 * Build the Invetory for Vehicles HTML
-* ************************************ */
-const price = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(vehicle_id.price);
-const mileage = new Intl.NumberFormat('en-US').format(vehicle_id.mileage);
+* ************************************ 
+const inv_price = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(vehicle.inv_price);
+const inv_miles = new Intl.NumberFormat('en-US').format(vehicle.inv_miles); */
 
 Util.buildVehicledata = async function(data){
   const vehicleData = `
   <div class ="vehicle-details">
-  <h1>${vehicle_id.make} ${vehicle_id.model}<h1>
-  <img src="${vehicle_inv_image}>" alt="${vehicle_id.make} ${vehicle_id.model}">
-  <p>Year:${vehicle_id.year}</p>
-  <p>Price:${price}</p>
-  <p>Mileage: ${mileage} miles</p>
-  <p>Description:${vehicle_id.description}</p>
+  <h1>${vehicle.inv_make} ${vehicle_id.inv_model}<h1>
+  <img src="${vehicle.inv_image}>" alt="${vehicle.inv_make} ${vehicl.inv_model}">
+  <p>Year:${vehicle.year}</p>
+  <p>Price:${inv_price}</p>
+  <p>Mileage: ${inv_miles} miles</p>
+  <p>Description:${vehicle.inv_description}</p>
   </div>`
   ;
 
