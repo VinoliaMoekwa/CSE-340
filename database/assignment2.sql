@@ -1,3 +1,11 @@
+INSERT INTO public.account (first_name, last_name,email,password)
+VALUES ('Tony','Stark','tony@starkent.com','Iam1ronM@n');
+
+UPDATE public.account SET account_type ='Admin'
+WHERE first_name ='Tony';
+
+DELETE FROM account
+WHERE first_name = 'Tony';
 
 
 --Update GM Hummer Description
